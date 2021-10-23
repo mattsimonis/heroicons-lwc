@@ -1,0 +1,38 @@
+{
+  "name": "heroicons-lwc",
+  "version": "0.0.1",
+  "author": "Matt Simonis",
+  "bugs": "https://github.com/mattsimonis/heroicons-lwc/issues",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
+  "engines": {
+    "node": ">=10.13.0",
+    "npm": ">=6.4.1",
+    "yarn": ">=1.9.4"
+  },
+  "files": [
+    "src/icons"
+  ],
+  "homepage": "https://github.com/mattsimonis/heroicons-lwc",
+  "keywords": [
+    "lwc"
+  ],
+  "license": "MIT",
+  "lwc": {
+    "modules": [
+      {
+        "dir": "src"
+      }
+    ],
+    "expose": [
+      "icons/heroicons"
+    ]
+  },
+  "repository": "https://github.com/mattsimonis/heroicons-lwc",
+  "scripts": {
+    "build:icons": "node build.js",
+    "prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
+    "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,ts,yaml,yml}\""
+  }
+}
