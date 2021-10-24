@@ -1,9 +1,16 @@
 {
   "name": "heroicons-lwc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Matt Simonis",
+  "description": "LWC component for Heroicons",
   "bugs": "https://github.com/mattsimonis/heroicons-lwc/issues",
   "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
+    "@lwc/eslint-plugin-lwc": "^1.1.0",
+    "eslint": "^8.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-restricted-globals": "^0.2.0",
     "prettier": "^2.4.1"
   },
   "engines": {
@@ -16,7 +23,9 @@
   ],
   "homepage": "https://github.com/mattsimonis/heroicons-lwc",
   "keywords": [
-    "lwc"
+    "lwc",
+    "heroicons",
+    "icons"
   ],
   "license": "MIT",
   "lwc": {
@@ -29,9 +38,13 @@
       "icons/heroicons"
     ]
   },
-  "repository": "https://github.com/mattsimonis/heroicons-lwc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattsimonis/heroicons-lwc.git"
+  },
   "scripts": {
     "build:icons": "node build.js",
+    "lint": "eslint **/*.js",
     "prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,ts,yaml,yml}\""
   }

@@ -22,4 +22,8 @@ export default class Heroicons extends LightningElement {
   get href() {
     return this.src || '';
   }
+
+  get name() {
+    return this.iconName || '';
+  }
 }

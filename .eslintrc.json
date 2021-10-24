@@ -1,0 +1,49 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": [
+          "classProperties",
+          ["decorators", { "decoratorsBeforeExport": false }]
+        ]
+      }
+    }
+  },
+
+  "plugins": ["import", "@lwc/eslint-plugin-lwc"],
+
+  "extends": ["eslint:recommended", "plugin:import/errors"],
+
+  "rules": {
+    // LWC specific rules
+    "@lwc/lwc/no-deprecated": "error",
+    "@lwc/lwc/valid-track": "error",
+    "@lwc/lwc/valid-wire": "error",
+    "@lwc/lwc/no-api-reassignments": "error",
+    "@lwc/lwc/no-async-operation": "error",
+    "@lwc/lwc/no-attributes-during-construction": "error",
+    "@lwc/lwc/no-document-query": "error",
+    "@lwc/lwc/no-dupe-class-members": "error",
+    "@lwc/lwc/no-inner-html": "error",
+    "@lwc/lwc/no-leading-uppercase-api-name": "error",
+    "@lwc/lwc/prefer-custom-event": "error",
+    "@lwc/lwc/valid-api": [
+      "error",
+      {
+        "disallowUnderscoreUppercaseMix": true
+      }
+    ],
+
+    // Disable unresolved import rule since it doesn't work well with the way the LWC compiler
+    // resolves the different modules
+    "import/no-unresolved": "off"
+  },
+
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  }
+}

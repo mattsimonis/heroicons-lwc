@@ -68,7 +68,7 @@ const processRepo = () => {
     fs.writeFileSync(
       path.join(iconsFolder, 'templates.js'),
       imports
-        .sort(([_, a], [__, b]) => a.localeCompare(b))
+        .sort(([_, a], [__, b]) => a.localeCompare(b)) // eslint-disable-line
         .map(([importPath]) => {
           const importName = importPath.split('/')[1].split('.')[0];
           console.log(`↳ ${importName}`);
