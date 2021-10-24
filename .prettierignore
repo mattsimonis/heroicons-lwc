@@ -7,9 +7,6 @@ lib/
 # Default dist folder
 dist/
 
-# Default resources folder
-src/resources
-
-# Build files
-heroicons
-lwc
+# Ignore generated icon templates
+**/heroicons/templates.js
+**/heroicons/templates

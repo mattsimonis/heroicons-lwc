@@ -16,7 +16,7 @@ export default class Heroicons extends LightningElement {
   }
 
   get computedClass() {
-    return this.svgClass
+    return this.svgClass;
   }
 
   get href() {

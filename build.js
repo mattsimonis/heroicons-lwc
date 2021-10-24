@@ -11,12 +11,7 @@ function toPascalCase(text) {
 }
 
 const folder = path.join(__dirname, 'heroicons');
-const iconsFolder = path.join(
-  __dirname,
-  'src',
-  'icons',
-  'heroicons'
-);
+const iconsFolder = path.join(__dirname, 'src', 'icons', 'heroicons');
 
 const gitRepo = 'git clone https://github.com/tailwindlabs/heroicons.git';
 
@@ -74,9 +69,9 @@ const processRepo = () => {
       path.join(iconsFolder, 'templates.js'),
       imports
         .sort(([_, a], [__, b]) => a.localeCompare(b))
-        .map(([importPath, name]) => {
-          console.log(`↳ ${name}`);
+        .map(([importPath]) => {
           const importName = importPath.split('/')[1].split('.')[0];
+          console.log(`↳ ${importName}`);
           exportsList.push(importName);
           return `import { default as ${importName} } from './templates/${importPath}';`;
         })
